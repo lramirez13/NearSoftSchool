@@ -1,0 +1,17 @@
+{
+  "name": "airline-fe",
+  "version": "1.0.0",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "server": "^1.0.18",
+    "spa-http-server": "^0.9.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}

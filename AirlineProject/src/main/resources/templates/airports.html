@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://tymeLeaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text = "${title}">Title</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>airports</th>
+    </tr>
+
+    </thead>
+    <tbody>
+    <tr th:each="airport : ${airportList}">
+        <td th:text="${airport.name}"></td>
+    </tr>
+    </tbody>
+</table>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Using the XMLHttpRequest Object</h2>
+
+<div id="demo">
+    <button type="button" onclick="loadXMLDoc()">Change Content</button>
+</div>
+
+<script>
+function loadXMLDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "http://localhost:8080/Airports", true);
+  xhttp.send();
+}
+</script>
+
+</body>
+</html>
+</body>
+</html>

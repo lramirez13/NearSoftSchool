@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.springframework.org/schema/jdbc">
+<body>
+
+<h2>Using the XMLHttpRequest Object</h2>
+
+<div id="demo">
+    <button type="button" onclick="loadXMLDoc()">Change Content</button>
+</div>
+
+<div id="autocomplete-container">
+    <input type="text" autofocus="true" name="autofocus sample" placeholder="search airport"
+           id="autocomplete-input">
+    <ul id="autocomplete-results">
+    </ul>
+</div>
+
+<script th:src="@{/static.js/test.js}"/>
+</body>
+</html>

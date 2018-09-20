@@ -1,0 +1,23 @@
+h1{
+	color:#0000FF;
+}
+
+h2{
+	color:#FF0000;
+}
+
+label {
+    float: left
+}
+
+span {
+    display: block;
+    overflow: hidden;
+    padding: 0 4px 0 6px
+}
+
+input {
+    width: 100%
+}
+
+
