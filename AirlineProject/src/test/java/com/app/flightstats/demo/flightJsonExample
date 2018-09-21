@@ -1,0 +1,135 @@
+{
+   "request": {
+      "departureAirport": {
+         "requestedCode": "CUU",
+         "fsCode": "CUU"
+      },
+      "arrivalAirport": {
+         "requestedCode": "CUN",
+         "fsCode": "CUN"
+      },
+      "codeType": {},
+      "departing": false,
+      "date": {
+         "year": "2018",
+         "month": "10",
+         "day": "16",
+         "interpreted": "2018-10-16"
+      },
+      "url": "https://api.flightstats.com/flex/schedules/rest/v1/json/from/CUU/to/CUN/arriving/2018/10/16"
+   },
+   "scheduledFlights": [
+      {
+         "carrierFsCode": "Y4",
+         "flightNumber": "116",
+         "departureAirportFsCode": "CUU",
+         "arrivalAirportFsCode": "CUN",
+         "stops": 0,
+         "arrivalTerminal": "2",
+         "departureTime": "2018-10-16T15:46:00.000",
+         "arrivalTime": "2018-10-16T19:55:00.000",
+         "flightEquipmentIataCode": "320",
+         "isCodeshare": false,
+         "isWetlease": false,
+         "serviceType": "J",
+         "serviceClasses": [
+            "F",
+            "Y"
+         ],
+         "trafficRestrictions": [],
+         "codeshares": [],
+         "referenceCode": "619-2824077--"
+      },
+      {
+         "carrierFsCode": "VB",
+         "flightNumber": "4183",
+         "departureAirportFsCode": "CUU",
+         "arrivalAirportFsCode": "CUN",
+         "stops": 0,
+         "arrivalTerminal": "2",
+         "departureTime": "2018-10-16T08:00:00.000",
+         "arrivalTime": "2018-10-16T12:00:00.000",
+         "flightEquipmentIataCode": "320",
+         "isCodeshare": false,
+         "isWetlease": false,
+         "serviceType": "J",
+         "serviceClasses": [
+            "R",
+            "F",
+            "J",
+            "Y"
+         ],
+         "trafficRestrictions": [],
+         "codeshares": [],
+         "referenceCode": "619-4025016--"
+      }
+   ],
+   "appendix": {
+      "airlines": [
+         {
+            "fs": "VB",
+            "iata": "VB",
+            "icao": "VIV",
+            "name": "VivaAerobus",
+            "active": true
+         },
+         {
+            "fs": "Y4",
+            "iata": "Y4",
+            "icao": "VOI",
+            "name": "Volaris",
+            "active": true
+         }
+      ],
+      "airports": [
+         {
+            "fs": "CUU",
+            "iata": "CUU",
+            "icao": "MMCU",
+            "name": "Gen Fierro Villalobos Airport",
+            "city": "Chihuahua",
+            "cityCode": "CUU",
+            "countryCode": "MX",
+            "countryName": "Mexico",
+            "regionName": "North America",
+            "timeZoneRegionName": "America/Mazatlan",
+            "localTime": "2018-09-20T12:18:54.194",
+            "utcOffsetHours": -6,
+            "latitude": 28.704048,
+            "longitude": -105.96952,
+            "elevationFeet": 4462,
+            "classification": 3,
+            "active": true
+         },
+         {
+            "fs": "CUN",
+            "iata": "CUN",
+            "icao": "MMUN",
+            "name": "Cancun International Airport",
+            "city": "Cancun",
+            "cityCode": "CUN",
+            "countryCode": "MX",
+            "countryName": "Mexico",
+            "regionName": "North America",
+            "timeZoneRegionName": "America/Cancun",
+            "localTime": "2018-09-20T13:18:54.194",
+            "utcOffsetHours": -5,
+            "latitude": 21.040457,
+            "longitude": -86.874435,
+            "elevationFeet": 23,
+            "classification": 2,
+            "active": true
+         }
+      ],
+      "equipments": [
+         {
+            "iata": "320",
+            "name": "Airbus A320",
+            "turboProp": false,
+            "jet": true,
+            "widebody": false,
+            "regional": false
+         }
+      ]
+   }
+}

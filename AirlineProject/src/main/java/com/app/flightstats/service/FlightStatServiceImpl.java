@@ -22,6 +22,7 @@ public class FlightStatServiceImpl implements FlightStatService {
     @Autowired
     private Environment env;
 
+    RestTemplate restTemplate = new RestTemplate();
 
     public FlightStatServiceImpl() {
     }
@@ -30,10 +31,8 @@ public class FlightStatServiceImpl implements FlightStatService {
     public String flightByRouteAndGivenDate(FlightInformation flightInformation) {
 
         try {
-            RestTemplate restTemplate = new RestTemplate();
-
             ResponseEntity<String> entityResponse = restTemplate.getForEntity(getFlightByRouteAndGivenDateUrl(flightInformation), String.class);
-            flightInformation.setScheduledFlights(scheduledFlightNodeToScheduledFlight(entityResponse));
+            flightInformation.setScheduledFlights(scheduledFlightNodeToScheduledFlight(entityResponse.getBody()));
             ObjectMapper result = new ObjectMapper();
             return result.writeValueAsString(flightInformation);
 
@@ -42,12 +41,11 @@ public class FlightStatServiceImpl implements FlightStatService {
         }
     }
 
-    private List<ScheduledFlights> scheduledFlightNodeToScheduledFlight(ResponseEntity<String> entityResponse) throws Exception {
-
+    @Override
+    public List<ScheduledFlights> scheduledFlightNodeToScheduledFlight(String flightNode) throws Exception {
         List<ScheduledFlights> flights = new ArrayList();
-
         ObjectMapper objectMapper = new ObjectMapper();
-        JsonNode rootNode = objectMapper.readTree(entityResponse.getBody());
+        JsonNode rootNode = objectMapper.readTree(flightNode);
         JsonNode scheduledFlightsNode = rootNode.path("scheduledFlights");
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss.sss");
         Iterator<JsonNode> elements = scheduledFlightsNode.elements();
